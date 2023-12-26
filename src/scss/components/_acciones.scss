@@ -1,0 +1,14 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.acciones {
+	text-align: center;
+    margin-top: v.$separacion;
+	a {
+		color: v.$amarillo;
+		transition: .3s;
+	}
+	a:hover {
+		color: darken(v.$amarillo, 10%);
+	}
+}

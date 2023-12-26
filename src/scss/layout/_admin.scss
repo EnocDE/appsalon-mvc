@@ -1,0 +1,91 @@
+@use "base/variables" as v;
+
+.citas {
+	list-style-type: none;
+	padding: 0;
+	li {
+		padding: 1rem;
+		border-bottom: 1px solid v.$blanco;
+		&:last-child {
+			border-bottom: none;
+		}
+		p {
+			font-weight: v.$bold;
+			color: v.$amarillo;
+		}
+
+		span,
+		.servicio {
+			font-weight: v.$regular;
+			color: v.$blanco;
+		}
+
+		.servicio {
+			color: v.$azul2;
+		}
+
+		.precio {
+			text-decoration: underline;
+			text-decoration-color: v.$rojo2;
+		}
+	}
+}
+
+.noCitas {
+	margin-top: 5rem;
+}
+
+.servicios {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(30rem, 25rem), 1fr));
+	gap: 2rem;
+	padding: 0;
+	li {
+		position: relative;
+		padding: 1.5rem 1.5rem 4rem 1.5rem;
+		background-color: cornflowerblue;
+		border-radius: 1rem;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	p {
+		font-weight: v.$bold;
+		color: v.$morado2;
+		margin: 1rem 0;
+		span {
+			font-weight: v.$regular;
+			color: v.$blanco;
+		}
+	}
+}
+
+.btn {
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+	
+	border-radius: 999px;
+	display: block;
+	text-align: center;
+	line-height: 3rem;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.btn-actualizar {
+	bottom: .5rem;
+	right: .5rem;
+    background-color: gold;
+    color: v.$blanco;
+}
+
+.btn-eliminar {
+	bottom: .5rem;
+	right: 4rem;
+    background-color: darkred;
+    color: v.$blanco;
+    cursor: pointer;
+}

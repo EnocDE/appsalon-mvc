@@ -1,0 +1,67 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.formulario {
+	margin-top: 5rem;
+	width: 100%;
+}
+
+.campo {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+	label {
+		flex-basis: 12rem;
+		padding: 1rem 0;
+	}
+
+	input {
+		width: 100%;
+		flex: 1;
+		border: none;
+		padding: calc(v.$separacion / 4);
+		border-radius: 1rem;
+		min-width: 22rem;
+		outline: none;
+		caret-color: #608fff;
+		&:disabled {
+			color: v.$blanco;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.campo-password {
+	position: relative;
+	flex: 1;
+}
+
+.icono-ojo {
+	width: 2.5rem;
+	cursor: pointer;
+	margin: 0 1rem;
+	align-self: center;
+	position: absolute;
+	right: 0.2rem;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: v.$blanco;
+	user-select: none;
+	-webkit-user-drag: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+}
+
+.icono-ojo-animacion {
+	animation: fadeUp 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

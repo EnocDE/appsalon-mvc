@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+
+.alerta {
+    padding: calc(v.$separacion / 4);
+    color: v.$blanco;
+    width: 100%;    
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: v.$bold;
+    opacity: 0;
+    animation: aparecer 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards .1s;
+
+    &.error {
+        background-color: v.$rojo;
+    }
+
+    &.exito {
+        background-color: v.$verde;
+    }
+
+    
+}
+
+.swal2-popup {
+    font-size: 1.8rem;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+
+    to {
+        opacity: 1;
+    }
+}
